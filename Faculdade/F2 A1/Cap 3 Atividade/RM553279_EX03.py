@@ -10,7 +10,7 @@ for x in range(1,50,2):
     notasImpares = float(input(f'POR FAVOR, INSIRA A NOTA DO ALUNO DE NÚMERO {x}.'))
     totalImpares = totalImpares + notasImpares
     quantidadeX = x + quantidadeX
-for y in range(2,50,2):
+for y in range(2,51,2):
     print('VOCÊ ESTÁ DIGITANDO AS NOTAS DOS ALUNOS PARES') 
     notasPares = float(input(f'POR FAVOR, INSIRA A NOTA DO ALUNO DE NÚMERO {y}.'))
     totalPares = totalPares + notasPares
@@ -21,5 +21,5 @@ mediaPares = totalPares/quantidadeY
 
 if mediaImpares > mediaPares:
     print('Alunos Impares venceram')
-else:
+elif mediaPares > mediaImpares:
     print('Alunos Pares venceram')
