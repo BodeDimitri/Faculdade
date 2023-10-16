@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9F6ACF4A-F1BA-B63A-FCB7-6F022FACBF0F" name="T_SIP_FUNCIONARIO">
+<createdBy>diego</createdBy>
+<createdTime>2023-10-16 11:07:13 UTC</createdTime>
+<ownerDesignName>EXEMPLO</ownerDesignName>
+<engineerTo>
+<item key="EF91736A-086B-952C-39EA-1A57F6157109" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="nr_matricula" id="3CAD5691-0533-D8CB-930B-BA6AD19DB653">
+<createdBy>diego</createdBy>
+<createdTime>2023-10-16 11:10:32 UTC</createdTime>
+<ownerDesignName>EXEMPLO</ownerDesignName>
+<engineerTo>
+<item key="EF91736A-086B-952C-39EA-1A57F6157109" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_funcionario" id="62B91646-10F5-E1CA-2E5F-A0C775C49A5A">
+<createdBy>diego</createdBy>
+<createdTime>2023-10-16 11:09:25 UTC</createdTime>
+<ownerDesignName>EXEMPLO</ownerDesignName>
+<engineerTo>
+<item key="EF91736A-086B-952C-39EA-1A57F6157109" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_nascimento" id="6552E621-2D83-5C2C-D6DF-525C5EA25B3E">
+<createdBy>diego</createdBy>
+<createdTime>2023-10-16 11:11:32 UTC</createdTime>
+<ownerDesignName>EXEMPLO</ownerDesignName>
+<engineerTo>
+<item key="EF91736A-086B-952C-39EA-1A57F6157109" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_admissao" id="4FA254E6-7F47-50BD-C7FE-507DE936C79F">
+<createdBy>diego</createdBy>
+<createdTime>2023-10-16 11:11:42 UTC</createdTime>
+<ownerDesignName>EXEMPLO</ownerDesignName>
+<engineerTo>
+<item key="EF91736A-086B-952C-39EA-1A57F6157109" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="vl_salario" id="9886743C-B553-3AE5-6FD8-70E4C4C80B88">
+<createdBy>diego</createdBy>
+<createdTime>2023-10-16 11:11:50 UTC</createdTime>
+<ownerDesignName>EXEMPLO</ownerDesignName>
+<engineerTo>
+<item key="EF91736A-086B-952C-39EA-1A57F6157109" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="24210BC0-1224-6506-50FE-7ED6FD443DDC" name="T_SIP_FUNCIONARIO PK">
+<createdBy>diego</createdBy>
+<createdTime>2023-10-16 11:09:29 UTC</createdTime>
+<ownerDesignName>EXEMPLO</ownerDesignName>
+<engineerTo>
+<item key="EF91736A-086B-952C-39EA-1A57F6157109" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3CAD5691-0533-D8CB-930B-BA6AD19DB653</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
