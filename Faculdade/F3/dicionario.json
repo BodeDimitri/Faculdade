@@ -1,0 +1,35 @@
+{
+    "livro": {
+        "titulo": "Crime e Castigo",
+        "ano_publicacao": 1866
+    },
+    "personagens": [
+        {
+            "nome": "Rask\u00f3lnikov",
+            "idade": 23,
+            "profissao": "estudante",
+            "atributos": [
+                "inteligente",
+                "atormentado"
+            ]
+        },
+        {
+            "nome": "S\u00f4nia Marmiel\u00e1dov",
+            "idade": 20,
+            "profissao": "prostituta",
+            "atributos": [
+                "bondosa",
+                "altru\u00edsta"
+            ]
+        },
+        {
+            "nome": "Porf\u00edri Petrovitch",
+            "idade": 45,
+            "profissao": "inspetor de pol\u00edcia",
+            "atributos": [
+                "astuto",
+                "perspicaz"
+            ]
+        }
+    ]
+}
