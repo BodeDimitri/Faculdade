@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Fintech</title>
+</head>
+<body>
+    <header>
+    <div class="hamburger-menu bg_p">
+        <h1 class="text-center mont_s">Fintech</h1>
+        <input onclick="myFunction()" id="menu__toggle" type="checkbox"/>
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+    
+        <ul class="menu__box">
+          <li><a class="menu__item" href="#">Perfil</a></li>
+          <li><a class="menu__item" href="#">Transferência</a></li>
+          <li><a class="menu__item" href="#">Investimentos</a></li>
+          <li><a class="menu__item" href="#">Pagamentos</a></li>
+          <li><a class="menu__item" href="#">Cartões</a></li>
+        </ul>
+        <div class="container-fluid header_fintech">
+            <p class="div_container_p">Olá, Diego</p>
+            <a class="a-no" href="#"><p class="div_container_p_encerrar">Encerrar sessão</p></a>
+        </div>
+        <div class="container-fluid header_fintech_box">
+            <div class="header_fintech_box_gastos">
+                <p>Saldo:</p>
+                <p>R$ XX.XXX,XX</p>
+            </div>
+            <div class="header_fintech_box_gastos">
+                <p>Gastos: </p>
+                <p>R$ XX.XXX,XX</p>
+            </div>
+        </div>
+        <div id="myDIV" class="container-fluid header_fintech_procurar">
+            <input class="input-search" type="search" name="" id="" placeholder="O que desejar procurar?">
+        <div>
+            <img src="assets/search.png" alt="">
+        </div>
+        </div>
+    </header>
+    <main>
+        <div class="main_boxs">
+            <div class="container-fluid main_saldo_box">
+                <h3 class="main_saldo_box_titulo">Saldo</h3>
+                <p class="main_saldo_box_p_sal">Salário - R$ X.XXX,XX</p>
+                <p class="main_saldo_box_p">  Investimentos:</p>
+                <p class="main_saldo_box_p"> CDB - R$ X.XXX,XX</p> 
+                <p class="main_saldo_box_p">Variavel - R$ X.XXX,XX</p>
+                <p class="main_saldo_box_p">Tesouro direto - R$ XXX,XX</p>
+                <div class="main_saldo_box_vm">
+                    <a class="a-no" href=""><p>Ver mais</p></a>
+                </div>
+            </div>
+            <div class="container-fluid main_saldo_box">
+                <h3 class="main_saldo_box_titulo">Gastos</h3>
+                <p class="main_saldo_box_p">Aluguel - R$ XXX,XX</p>
+                <p class="main_saldo_box_p">Luz - R$ XXX,XX</p>
+                <p class="main_saldo_box_p">Àgua - R$ XX,XX</p>
+                <br>
+                <p class="main_saldo_box_p">Compras:</p>
+                <p class="main_saldo_box_p">Mercado - R$
+                    XXX,XX</p>
+                <p class="main_saldo_box_p">Farmacia - R$
+                    XX,XX</p>
+                <div class="main_saldo_box_vm">
+                    <a class="a-no" href=""><p>Ver mais</p></a>
+                </div>    
+            </div>
+        </div>
+        <div class="main_box_flex">
+            <div class="container-fluid main_box_options">
+                <p class="main_box_options_p">Transferências</p>
+            </div>
+            <div class="container-fluid main_box_options">
+                <p class="main_box_options_p">Investimentos</p>
+            </div>
+        </div>
+        <div class="main_box_flex">
+            <div class="container-fluid main_box_options">
+                <p class="main_box_options_p">Pagamentos</p>
+            </div>
+            <div class="container-fluid main_box_options">
+                <p class="main_box_options_p">Cartões</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container-fluid footer fixed-bottom">
+            <p class="footer_p">SAC: (XX) XXXX-XXXX</p>
+            <p class="footer_p">E-Mail: SACFintech@fintech.com.br</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="javascript.js"></script>
+</body>
+</html>

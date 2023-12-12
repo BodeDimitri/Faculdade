@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;900&display=swap');
+
+#menu__toggle {
+    opacity: 0;
+  }
+  #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+  }
+  .menu__btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition-duration: .25s;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+
+  .a-no {
+    text-decoration: none;
+    color: white;
+  }
+
+  .menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #BA0B17;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+  }
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25em;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+  .menu__item:hover {
+    background-color: #CFD8DC;
+  }
+  
+  .bg_p{
+    padding-top: 8px;
+    background-color: #BA0B17;
+    color: white;
+    position: relative;
+  }
+
+  .mont_s {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    font-weight: 900;
+  }
+
+  
+  .header_fintech {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid white;
+    width: 87vw;
+  }
+
+  .div_container_p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125em;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+
+  .div_container_p_encerrar {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75em;
+    font-weight: 200;
+    margin-bottom: 0;
+  }
+
+  .div_container_hr {
+    border: 1.5px solid white;
+  }
+
+  .header_fintech_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 0.9em;
+    padding-bottom: 0.4em;
+  }
+
+  .header_fintech_box_gastos {
+    border: solid white;
+    border-radius: 10px;
+    width: 40vw;
+    margin-bottom: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    padding-left: 1em;
+    font-size:  0.875em;
+  }
+
+  .header_fintech_procurar {
+    position: absolute;
+    left: 10%;
+    top: 93%;
+    display: flex;
+    border-radius: 25px;
+    background-color: #FFE8E8;
+    color: black;
+    width: 80vw;
+    height: 3vh;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    align-items: center;
+  }
+
+  .input-search {
+    border: none;
+    background-color:#FFE8E8;
+    width: 80vw;
+    outline: none;
+    height: 3vh;
+  }
+
+  .header_fintech_texto {
+    margin: 0%;
+    padding: 0%;
+  }
+
+
+  .main_boxs {
+    display: flex;
+    margin-bottom: 0.9em;
+  }
+
+  .main_saldo_box {
+    border: solid #BA0B17;
+    background-color: #BA0B17;
+    width: 40vw;
+    height: 40vh;
+    color: white;
+    border-radius: 10px;
+    margin-top: 1.3em;
+  }
+
+  .main_saldo_box_titulo {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size:  0.875em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  .main_saldo_box_p {
+    font-size: 0.8125em;
+    margin-bottom: 2px;
+  }
+
+  .main_saldo_box_vm {
+    font-size: 0.8125em;
+    align-items: flex-end;
+    text-decoration: underline;
+  }
+
+  .main_saldo_box_p_sal {
+    font-size: 0.75em;
+  }
+
+  .main_box_flex {
+    display: flex;
+    margin-bottom: 1.2em;
+  }
+
+  .main_box_options {
+    display: flex;
+    border: solid #BA0B17;
+    color: black;
+    border-radius: 10px;
+    width: 40vw;
+    height: 10vh;
+    align-items: center;
+  }
+
+  .main_box_options_p {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .footer {
+    background: #EEB9B9;
+    width: 100%;
+    height: 5vh;
+    text-align: center;
+ }
+
+  .footer_p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6875em;
+    font-weight: 400;
+    color: black;
+    margin: 0.1em 0 0 0;
+  }
+
+  @media screen and (min-width: 992px) {
+    
+    .header_fintech_box_gastos {
+      width: 35vw;
+      font-size: 1em;
+    }
+    
+    .main_saldo_box {
+      width: 35vw;
+      height: 35vh;
+      font-size:  1.25em;
+    }
+
+    .main_box_options {
+      width: 35vw;
+      font-size:  1.25em;
+    }
+    
+  }
