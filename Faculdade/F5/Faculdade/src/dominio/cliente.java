@@ -10,7 +10,6 @@ public class cliente {
 	private String txSenha;
 	
 	cliente(String idUsuario, String nmCompleto, String dsEmail, Date dtAniversario, String txSenha) {
-		super();
 		this.idUsuario = idUsuario;
 		this.nmCompleto = nmCompleto;
 		this.dsEmail = dsEmail;

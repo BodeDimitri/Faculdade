@@ -1,5 +1,7 @@
 package dominio;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class gasto {
@@ -14,7 +16,6 @@ public class gasto {
 	
 	
 	public gasto(Integer idGasto, cliente usuario, categoriaGasto categoria, Double valor, Date dataHora,String descricao) {
-		super();
 		this.idGasto = idGasto;
 		this.usuario = usuario;
 		this.categoria = categoria;
@@ -24,7 +25,10 @@ public class gasto {
 	}
 
 	public String adicionar(Double valor, Date dateRecebimento, String descricao) {
-		return "Foi adicionado R$" + this.valor + " a sua conta, " + "no dia: " DateUtil.parseString(this.dataRecebimento, dd/MM/yyyy) + ;
+        DateFormat formatBR = new SimpleDateFormat("dd-MM-yyyy");
+        String dataConvertida = formatBR.format(dateRecebimento);
+        
+		return "Foi adicionado R$" + this.valor + " a sua conta, " + "no dia: "  + dataConvertida + " ,descricao: " + descricao;
 	}
 	
 	public void alterar(Integer idReceita) {
@@ -32,6 +36,6 @@ public class gasto {
 	}
 	
 	public void remover(Integer idReceita) {
-		this.idReceita
+		
 	}
 }

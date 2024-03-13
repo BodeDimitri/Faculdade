@@ -4,7 +4,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Receita {
+public class receita {
 	
 	protected Integer idReceita;
 	public cliente usuario;
@@ -14,8 +14,7 @@ public class Receita {
 
 	
 	
-	public Receita(Integer idReceita, cliente usuario, Double valor, Date dateRecebimento, String descricao) {
-		super();
+	public receita(Integer idReceita, cliente usuario, Double valor, Date dateRecebimento, String descricao) {
 		this.idReceita = idReceita;
 		this.usuario = usuario;
 		this.valor = valor;
