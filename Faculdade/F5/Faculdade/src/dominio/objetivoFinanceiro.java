@@ -42,6 +42,16 @@ public class objetivoFinanceiro {
 	}
 	
 	public void remover(Integer idObjetivo) {
-		
-	}
+	    if (this.idObjetivo.equals(idObjetivo)) {
+	        this.idObjetivo = null;
+	        this.usuario = null;
+	        this.nome = null;
+	        this.valor = null;
+	        this.dataDesejada = null;
+	        this.descricao = null;
+	        System.out.println("Objetivo financeiro removido com sucesso!");
+	    } else {
+	        System.out.println("ID de objetivo fornecido não corresponde a este objetivo financeiro.");
+	    }
+	}}
 }

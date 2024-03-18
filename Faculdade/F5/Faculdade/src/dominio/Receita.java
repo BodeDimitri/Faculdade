@@ -40,7 +40,16 @@ public class receita {
         }
     }
 	
-	public void remover(Integer idReceita) {
-		
-	}
+    public void remover(Integer idReceita) {
+        if (this.idReceita.equals(idReceita)) {
+            this.idReceita = null;
+            this.usuario = null;
+            this.valor = null;
+            this.dateRecebimento = null;
+            this.descricao = null;
+            System.out.println("Receita removida com sucesso!");
+        } else {
+            System.out.println("ID de receita fornecido não corresponde a esta receita.");
+        }
+    }}
 }

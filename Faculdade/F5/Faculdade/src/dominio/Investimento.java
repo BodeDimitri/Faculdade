@@ -50,6 +50,18 @@ public class Investimento {
 	}
 	
 	public void remover(Integer idInvestimento) {
-		
+	    if (this.idInvestimento.equals(idInvestimento)) {
+	        this.idInvestimento = null;
+	        this.usuario = null;
+	        this.tipo = null;
+	        this.nomeDaAplicacao = null;
+	        this.nomeBancoCorretora = null;
+	        this.valor = null;
+	        this.dataInvestimento = null;
+	        this.dataVencimento = null;
+	        System.out.println("Investimento removido com sucesso!");
+	    } else {
+	        System.out.println("ID de investimento fornecido não corresponde a este investimento.");
+	    }
 	}
 }

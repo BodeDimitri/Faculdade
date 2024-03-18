@@ -42,7 +42,17 @@ public class gasto {
 	    }
 	}
 	
-	public void remover(Integer idReceita) {
-		
+	public void remover(Integer idGasto) {
+	    if (this.idGasto.equals(idGasto)) {
+	        this.idGasto = null;
+	        this.usuario = null;
+	        this.categoria = null;
+	        this.valor = null;
+	        this.dataHora = null;
+	        this.descricao = null;
+	        System.out.println("Gasto removido com sucesso!");
+	    } else {
+	        System.out.println("ID de gasto fornecido não corresponde a este gasto.");
+	    }
 	}
 }
