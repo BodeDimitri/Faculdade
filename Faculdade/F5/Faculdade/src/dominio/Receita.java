@@ -29,9 +29,16 @@ public class receita {
         return "Foi adicionado R$" + valor + " a sua conta, " + "no dia: " +  dataConvertida + ", descricao: " + descricao;
     }
 	
-	public void alterar(Integer idReceita) {
-		
-	}
+    public void alterar(Integer idReceita, Double novoValor, Date novaDataRecebimento, String novaDescricao) {
+        if (this.idReceita.equals(idReceita)) {
+            this.valor = novoValor;
+            this.dateRecebimento = novaDataRecebimento;
+            this.descricao = novaDescricao;
+            System.out.println("Receita alterada com sucesso!");
+        } else {
+            System.out.println("ID de receita fornecido não corresponde a esta receita.");
+        }
+    }
 	
 	public void remover(Integer idReceita) {
 		

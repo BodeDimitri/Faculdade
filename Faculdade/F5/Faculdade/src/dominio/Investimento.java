@@ -36,8 +36,17 @@ public class Investimento {
 		return "Novo investimento de nome:" + nomeDaAplicacao + " , no banco: " + nomeBancoCorretora + ", valor de R$" + valor + " ,no prazo de " +  dataConvertidaInvestimento + " - " + dataConvertidaVencimento;
 	}
 	
-	public void alterar(Integer idInvestimento) {
-		
+	public void alterar(Integer idInvestimento, String novoNomeDaAplicacao, String novoNomeBancoCorretora, Double novoValor, Date novaDataInvestimento, Date novaDataVencimento) {
+	    if (this.idInvestimento.equals(idInvestimento)) {
+	        this.nomeDaAplicacao = novoNomeDaAplicacao;
+	        this.nomeBancoCorretora = novoNomeBancoCorretora;
+	        this.valor = novoValor;
+	        this.dataInvestimento = novaDataInvestimento;
+	        this.dataVencimento = novaDataVencimento;
+	        System.out.println("Investimento alterado com sucesso!");
+	    } else {
+	        System.out.println("ID de investimento fornecido não corresponde a este investimento.");
+	    }
 	}
 	
 	public void remover(Integer idInvestimento) {

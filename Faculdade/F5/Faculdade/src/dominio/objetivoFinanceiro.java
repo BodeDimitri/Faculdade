@@ -29,8 +29,16 @@ public class objetivoFinanceiro {
 		return "Novo objetivo financeiro de nome:" + nome + "de valor R$" + valor +  " ,para o dia: " +  dataConvertida + " ,descricao: " + descricao;
 	}
 	
-	public void alterar(Integer idObjetivo) {
-		
+	public void alterar(Integer idObjetivo, String novoNome, Double novoValor, Date novaDataDesejada, String novaDescricao) {
+	    if (this.idObjetivo.equals(idObjetivo)) {
+	        this.nome = novoNome;
+	        this.valor = novoValor;
+	        this.dataDesejada = novaDataDesejada;
+	        this.descricao = novaDescricao;
+	        System.out.println("Objetivo financeiro alterado com sucesso!");
+	    } else {
+	        System.out.println("ID de objetivo fornecido não corresponde a este objetivo financeiro.");
+	    }
 	}
 	
 	public void remover(Integer idObjetivo) {

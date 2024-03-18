@@ -31,8 +31,15 @@ public class gasto {
 		return "Foi adicionado R$" + this.valor + " a sua conta, " + "no dia: "  + dataConvertida + " ,descricao: " + descricao;
 	}
 	
-	public void alterar(Integer idReceita) {
-		
+	public void alterar(Integer idGasto, Double novoValor, Date novaDataHora, String novaDescricao) {
+	    if (this.idGasto.equals(idGasto)) {
+	        this.valor = novoValor;
+	        this.dataHora = novaDataHora;
+	        this.descricao = novaDescricao;
+	        System.out.println("Gasto alterado com sucesso!");
+	    } else {
+	        System.out.println("ID de gasto fornecido não corresponde a este gasto.");
+	    }
 	}
 	
 	public void remover(Integer idReceita) {
