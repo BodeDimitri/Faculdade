@@ -12,12 +12,76 @@ public class Investimento {
 	public String nomeDaAplicacao;
 	public String nomeBancoCorretora;
 	private Double valor;
-	private Date dataInvestimento;
-	private Date dataVencimento;
+	private String dataInvestimento;
+	private String dataVencimento;
 
 
 
-	public Investimento(Integer idInvestimento, cliente usuario, tipoInvestimento tipo, String nomeDaAplicacao,String nomeBancoCorretora, Double valor, Date dataInvestimento, Date dataVencimento) {
+	public Integer getIdInvestimento() {
+		return idInvestimento;
+	}
+
+	public void setIdInvestimento(Integer idInvestimento) {
+		this.idInvestimento = idInvestimento;
+	}
+
+	public cliente getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(cliente usuario) {
+		this.usuario = usuario;
+	}
+
+	public tipoInvestimento getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(tipoInvestimento tipo) {
+		this.tipo = tipo;
+	}
+
+	public String getNomeDaAplicacao() {
+		return nomeDaAplicacao;
+	}
+
+	public void setNomeDaAplicacao(String nomeDaAplicacao) {
+		this.nomeDaAplicacao = nomeDaAplicacao;
+	}
+
+	public String getNomeBancoCorretora() {
+		return nomeBancoCorretora;
+	}
+
+	public void setNomeBancoCorretora(String nomeBancoCorretora) {
+		this.nomeBancoCorretora = nomeBancoCorretora;
+	}
+
+	public Double getValor() {
+		return valor;
+	}
+
+	public void setValor(Double valor) {
+		this.valor = valor;
+	}
+
+	public String getDataInvestimento() {
+		return dataInvestimento;
+	}
+
+	public void setDataInvestimento(String dataInvestimento) {
+		this.dataInvestimento = dataInvestimento;
+	}
+
+	public String getDataVencimento() {
+		return dataVencimento;
+	}
+
+	public void setDataVencimento(String dataVencimento) {
+		this.dataVencimento = dataVencimento;
+	}
+
+	public Investimento(Integer idInvestimento, cliente usuario, tipoInvestimento tipo, String nomeDaAplicacao,String nomeBancoCorretora, Double valor, String dataInvestimento, String dataVencimento) {
 		this.idInvestimento = idInvestimento;
 		this.usuario = usuario;
 		this.tipo = tipo;
@@ -36,7 +100,7 @@ public class Investimento {
 		return "Novo investimento de nome:" + nomeDaAplicacao + " , no banco: " + nomeBancoCorretora + ", valor de R$" + valor + " ,no prazo de " +  dataConvertidaInvestimento + " - " + dataConvertidaVencimento;
 	}
 	
-	public void alterar(Integer idInvestimento, String novoNomeDaAplicacao, String novoNomeBancoCorretora, Double novoValor, Date novaDataInvestimento, Date novaDataVencimento) {
+	public void alterar(Integer idInvestimento, String novoNomeDaAplicacao, String novoNomeBancoCorretora, Double novoValor, String novaDataInvestimento, String novaDataVencimento) {
 	    if (this.idInvestimento.equals(idInvestimento)) {
 	        this.nomeDaAplicacao = novoNomeDaAplicacao;
 	        this.nomeBancoCorretora = novoNomeBancoCorretora;
@@ -63,5 +127,14 @@ public class Investimento {
 	    } else {
 	        System.out.println("ID de investimento fornecido não corresponde a este investimento.");
 	    }
+	}
+	
+	public void exibirDados() {
+	    System.out.println("ID do Investimento: " + idInvestimento);
+	    System.out.println("Nome da Aplicação: " + nomeDaAplicacao);
+	    System.out.println("Banco/Corretora: " + nomeBancoCorretora);
+	    System.out.println("Valor: R$" + valor);
+	    System.out.println("Data de Investimento: " + dataInvestimento);
+	    System.out.println("Data de Vencimento: " + dataVencimento);
 	}
 }

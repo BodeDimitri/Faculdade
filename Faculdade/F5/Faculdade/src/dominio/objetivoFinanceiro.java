@@ -21,6 +21,80 @@ public class objetivoFinanceiro {
 		this.dataDesejada = dataDesejada;
 		this.descricao = descricao;
 	}
+	
+	
+
+	public Integer getIdObjetivo() {
+		return idObjetivo;
+	}
+
+
+
+	public void setIdObjetivo(Integer idObjetivo) {
+		this.idObjetivo = idObjetivo;
+	}
+
+
+
+	public cliente getUsuario() {
+		return usuario;
+	}
+
+
+
+	public void setUsuario(cliente usuario) {
+		this.usuario = usuario;
+	}
+
+
+
+	public String getNome() {
+		return nome;
+	}
+
+
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+
+
+	public Double getValor() {
+		return valor;
+	}
+
+
+
+	public void setValor(Double valor) {
+		this.valor = valor;
+	}
+
+
+
+	public Date getDataDesejada() {
+		return dataDesejada;
+	}
+
+
+
+	public void setDataDesejada(Date dataDesejada) {
+		this.dataDesejada = dataDesejada;
+	}
+
+
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+
 
 	public String adicionar(String nome,Double valor, Date dataDesejada, String descricao) {
         DateFormat formatBR = new SimpleDateFormat("dd-MM-yyyy");
@@ -53,5 +127,5 @@ public class objetivoFinanceiro {
 	    } else {
 	        System.out.println("ID de objetivo fornecido não corresponde a este objetivo financeiro.");
 	    }
-	}}
+	}
 }

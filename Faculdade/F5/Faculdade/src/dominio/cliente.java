@@ -1,23 +1,22 @@
 package dominio;
-import java.util.Date;
 
 public class cliente {
 	
-	protected String idUsuario;
+	protected int idUsuario;
 	public String nmCompleto;
 	public String dsEmail;
-	public Date dtAniversario;
+	public String dtAniversario;
 	private String txSenha;
 	
-	cliente(String idUsuario, String nmCompleto, String dsEmail, Date dtAniversario, String txSenha) {
-		this.idUsuario = idUsuario;
+	cliente(int i, String nmCompleto, String dsEmail, String dtAniversario, String txSenha) {
+		this.idUsuario = i;
 		this.nmCompleto = nmCompleto;
 		this.dsEmail = dsEmail;
 		this.dtAniversario = dtAniversario;
 		this.txSenha = txSenha;
 	}
 	
-	private String cadastrar(String nmCompleto, String dsEmail, Date dtAniversario, String txSenha) {
+	private String cadastrar(String nmCompleto, String dsEmail, String dtAniversario, String txSenha) {
 		this.nmCompleto = nmCompleto;
 		this.dsEmail = dsEmail;
 		this.dtAniversario = dtAniversario;
@@ -26,7 +25,7 @@ public class cliente {
 		return "Usuario criado com sucesso";
 	}
 	
-	private String exibirDados() {
+	public String exibirDados() {
 		return "Id: " + this.idUsuario + " ,Nome: " + this.nmCompleto + " ,Data de Aniversario: " + this.dtAniversario;
 	}
 	
@@ -34,7 +33,7 @@ public class cliente {
 		this.txSenha = novaSenha;
 	}
 	
-	private String identificarSe(String idUsuario, String txSenha) {
+	private String identificarSe(int idUsuario, String txSenha) {
 		if(idUsuario != this.idUsuario && txSenha != this.txSenha) {
 			return "Informacoes inseridas erradas, confira se digiou todas as informacoes corretamente";
 		} else {

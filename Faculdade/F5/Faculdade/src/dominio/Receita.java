@@ -9,12 +9,50 @@ public class receita {
 	protected Integer idReceita;
 	public cliente usuario;
 	private Double valor;
-	private Date dateRecebimento;
+	private String dateRecebimento;
 	private String descricao;
+	
+	public Integer getIdReceita() {
+		return idReceita;
+	}
 
-	
-	
-	public receita(Integer idReceita, cliente usuario, Double valor, Date dateRecebimento, String descricao) {
+	public void setIdReceita(Integer idReceita) {
+		this.idReceita = idReceita;
+	}
+
+	public cliente getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(cliente usuario) {
+		this.usuario = usuario;
+	}
+
+	public Double getValor() {
+		return valor;
+	}
+
+	public void setValor(Double valor) {
+		this.valor = valor;
+	}
+
+	public String getDateRecebimento() {
+		return dateRecebimento;
+	}
+
+	public void setDateRecebimento(String dateRecebimento) {
+		this.dateRecebimento = dateRecebimento;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public receita(Integer idReceita, cliente usuario, Double valor, String dateRecebimento, String descricao) {
 		this.idReceita = idReceita;
 		this.usuario = usuario;
 		this.valor = valor;
@@ -29,7 +67,7 @@ public class receita {
         return "Foi adicionado R$" + valor + " a sua conta, " + "no dia: " +  dataConvertida + ", descricao: " + descricao;
     }
 	
-    public void alterar(Integer idReceita, Double novoValor, Date novaDataRecebimento, String novaDescricao) {
+    public void alterar(Integer idReceita, Double novoValor, String novaDataRecebimento, String novaDescricao) {
         if (this.idReceita.equals(idReceita)) {
             this.valor = novoValor;
             this.dateRecebimento = novaDataRecebimento;
@@ -51,5 +89,5 @@ public class receita {
         } else {
             System.out.println("ID de receita fornecido não corresponde a esta receita.");
         }
-    }}
+    }
 }

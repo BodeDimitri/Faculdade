@@ -14,7 +14,54 @@ public class gasto {
 	private String descricao;
 	
 	
-	
+	public Integer getIdGasto() {
+		return idGasto;
+	}
+
+	public void setIdGasto(Integer idGasto) {
+		this.idGasto = idGasto;
+	}
+
+	public cliente getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(cliente usuario) {
+		this.usuario = usuario;
+	}
+
+	public categoriaGasto getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(categoriaGasto categoria) {
+		this.categoria = categoria;
+	}
+
+	public Double getValor() {
+		return valor;
+	}
+
+	public void setValor(Double valor) {
+		this.valor = valor;
+	}
+
+	public Date getDataHora() {
+		return dataHora;
+	}
+
+	public void setDataHora(Date dataHora) {
+		this.dataHora = dataHora;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
 	public gasto(Integer idGasto, cliente usuario, categoriaGasto categoria, Double valor, Date dataHora,String descricao) {
 		this.idGasto = idGasto;
 		this.usuario = usuario;
