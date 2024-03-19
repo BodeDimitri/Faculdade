@@ -2,10 +2,10 @@ package dominio;
 
 public class cliente {
 	
-	protected int idUsuario;
-	public String nmCompleto;
-	public String dsEmail;
-	public String dtAniversario;
+	private int idUsuario;
+	private String nmCompleto;
+	private String dsEmail;
+	private String dtAniversario;
 	private String txSenha;
 	
 	cliente(int i, String nmCompleto, String dsEmail, String dtAniversario, String txSenha) {

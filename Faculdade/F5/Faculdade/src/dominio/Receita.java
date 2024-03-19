@@ -6,8 +6,8 @@ import java.util.Date;
 
 public class receita {
 	
-	protected Integer idReceita;
-	public cliente usuario;
+	private Integer idReceita;
+	private cliente usuario;
 	private Double valor;
 	private String dateRecebimento;
 	private String descricao;

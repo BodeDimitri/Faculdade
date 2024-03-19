@@ -6,9 +6,9 @@ import java.util.Date;
 
 public class gasto {
 	
-	protected Integer idGasto;
-	public cliente usuario;
-	public categoriaGasto categoria;
+	private Integer idGasto;
+	private cliente usuario;
+	private categoriaGasto categoria;
 	private Double valor;
 	private Date dataHora;
 	private String descricao;

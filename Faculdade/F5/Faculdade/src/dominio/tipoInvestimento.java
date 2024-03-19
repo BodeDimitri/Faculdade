@@ -2,8 +2,8 @@ package dominio;
 
 public class tipoInvestimento {
 
-	protected Integer IdTipoInvestimento;
-	public String nome;
+	private Integer IdTipoInvestimento;
+	private String nome;
 	
 	
 	public tipoInvestimento(Integer idTipoInvestimento, String nome) {

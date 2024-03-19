@@ -2,8 +2,8 @@ package dominio;
 
 public class categoriaGasto {
 	
-	protected Integer idCategoria;
-	public String name;
+	private Integer idCategoria;
+	private String name;
 	
 	public categoriaGasto(Integer idCategoria, String name) {
 		this.idCategoria = idCategoria;

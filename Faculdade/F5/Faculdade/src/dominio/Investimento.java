@@ -6,11 +6,11 @@ import java.util.Date;
 
 public class Investimento {
 
-	protected Integer idInvestimento;
-	public cliente usuario;
-	public tipoInvestimento tipo;
-	public String nomeDaAplicacao;
-	public String nomeBancoCorretora;
+	private Integer idInvestimento;
+	private cliente usuario;
+	private tipoInvestimento tipo;
+	private String nomeDaAplicacao;
+	private String nomeBancoCorretora;
 	private Double valor;
 	private String dataInvestimento;
 	private String dataVencimento;

@@ -6,8 +6,8 @@ import java.util.Date;
 
 public class objetivoFinanceiro {
 	
-	protected Integer idObjetivo;
-	public cliente usuario;
+	private Integer idObjetivo;
+	private cliente usuario;
 	private String nome;
 	private Double valor;
 	private Date dataDesejada;
