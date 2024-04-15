@@ -1,11 +1,14 @@
-package dominio;
+package model.entities;
 
+import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Objects;
 
-public class receita {
+public class receita implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
 	private Integer idReceita;
 	private cliente usuario;
 	private Double valor;
@@ -90,4 +93,25 @@ public class receita {
             System.out.println("ID de receita fornecido não corresponde a esta receita.");
         }
     }
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(dateRecebimento, descricao, idReceita, usuario, valor);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		receita other = (receita) obj;
+		return Objects.equals(dateRecebimento, other.dateRecebimento) && Objects.equals(descricao, other.descricao)
+				&& Objects.equals(idReceita, other.idReceita) && Objects.equals(usuario, other.usuario)
+				&& Objects.equals(valor, other.valor);
+	}
+    
+
 }

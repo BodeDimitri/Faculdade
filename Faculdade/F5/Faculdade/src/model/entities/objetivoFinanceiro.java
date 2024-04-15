@@ -1,11 +1,15 @@
-package dominio;
+package model.entities;
 
+import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Objects;
 
-public class objetivoFinanceiro {
+public class objetivoFinanceiro implements Serializable {
 	
+
+	private static final long serialVersionUID = 1L;
 	private Integer idObjetivo;
 	private cliente usuario;
 	private String nome;
@@ -128,4 +132,25 @@ public class objetivoFinanceiro {
 	        System.out.println("ID de objetivo fornecido não corresponde a este objetivo financeiro.");
 	    }
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(dataDesejada, descricao, idObjetivo, nome, usuario, valor);
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		objetivoFinanceiro other = (objetivoFinanceiro) obj;
+		return Objects.equals(dataDesejada, other.dataDesejada) && Objects.equals(descricao, other.descricao)
+				&& Objects.equals(idObjetivo, other.idObjetivo) && Objects.equals(nome, other.nome)
+				&& Objects.equals(usuario, other.usuario) && Objects.equals(valor, other.valor);
+	}
+	
 }

@@ -1,11 +1,14 @@
-package dominio;
+package model.entities;
 
+import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Objects;
 
-public class Investimento {
+public class Investimento implements Serializable {
 
+	private static final long serialVersionUID = 1L;
 	private Integer idInvestimento;
 	private cliente usuario;
 	private tipoInvestimento tipo;
@@ -137,4 +140,28 @@ public class Investimento {
 	    System.out.println("Data de Investimento: " + dataInvestimento);
 	    System.out.println("Data de Vencimento: " + dataVencimento);
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(dataInvestimento, dataVencimento, idInvestimento, nomeBancoCorretora, nomeDaAplicacao, tipo,
+				usuario, valor);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Investimento other = (Investimento) obj;
+		return Objects.equals(dataInvestimento, other.dataInvestimento)
+				&& Objects.equals(dataVencimento, other.dataVencimento)
+				&& Objects.equals(idInvestimento, other.idInvestimento)
+				&& Objects.equals(nomeBancoCorretora, other.nomeBancoCorretora)
+				&& Objects.equals(nomeDaAplicacao, other.nomeDaAplicacao) && Objects.equals(tipo, other.tipo)
+				&& Objects.equals(usuario, other.usuario) && Objects.equals(valor, other.valor);
+	}
+	
 }

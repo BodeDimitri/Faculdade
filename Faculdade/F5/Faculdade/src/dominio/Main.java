@@ -1,5 +1,9 @@
 package dominio;
 
+import model.entities.Investimento;
+import model.entities.cliente;
+import model.entities.tipoInvestimento;
+
 public class Main {
 
 	public static void main(String[] args) {

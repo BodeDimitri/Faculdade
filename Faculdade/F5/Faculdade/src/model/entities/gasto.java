@@ -1,11 +1,14 @@
-package dominio;
+package model.entities;
 
+import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Objects;
 
-public class gasto {
+public class gasto implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
 	private Integer idGasto;
 	private cliente usuario;
 	private categoriaGasto categoria;
@@ -71,6 +74,9 @@ public class gasto {
 		this.descricao = descricao;
 	}
 
+	public gasto() {
+	}
+
 	public String adicionar(Double valor, Date dateRecebimento, String descricao) {
         DateFormat formatBR = new SimpleDateFormat("dd-MM-yyyy");
         String dataConvertida = formatBR.format(dateRecebimento);
@@ -102,4 +108,24 @@ public class gasto {
 	        System.out.println("ID de gasto fornecido não corresponde a este gasto.");
 	    }
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(categoria, dataHora, descricao, idGasto, usuario, valor);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		gasto other = (gasto) obj;
+		return Objects.equals(categoria, other.categoria) && Objects.equals(dataHora, other.dataHora)
+				&& Objects.equals(descricao, other.descricao) && Objects.equals(idGasto, other.idGasto)
+				&& Objects.equals(usuario, other.usuario) && Objects.equals(valor, other.valor);
+	}
+	
 }
