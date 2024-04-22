@@ -10,7 +10,7 @@ public class Investimento implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private Integer idInvestimento;
-	private cliente usuario;
+	protected cliente usuario;
 	private tipoInvestimento tipo;
 	private String nomeDaAplicacao;
 	private String nomeBancoCorretora;
